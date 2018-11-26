@@ -1,8 +1,7 @@
 - job:
-   name: test_job
+   name: test_job_in_sub_directory
    description: "Automatically generated from JBB"
    project-type: freestyle
    builders: 
       - shell: "df -mha"
 
-#resource: https://www.youtube.com/watch?v=SoP05dLe5kA

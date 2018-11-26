@@ -4,7 +4,17 @@
   <properties>
     <jenkins.security.ApiTokenProperty>
       <tokenStore>
-        <tokenList/>
+        <tokenList>
+          <jenkins.security.apitoken.ApiTokenStore_-HashedToken>
+            <uuid>ab2f6ef5-21d6-4c28-9e49-93e8a0f5498b</uuid>
+            <name>admin</name>
+            <creationDate>2018-11-26 03:17:21.47 UTC</creationDate>
+            <value>
+              <version>11</version>
+              <hash>bc91f3caa20ff6b6ec033717493ead8eb6c36c967c08f37a4bdaca0d009e7663</hash>
+            </value>
+          </jenkins.security.apitoken.ApiTokenStore_-HashedToken>
+        </tokenList>
       </tokenStore>
     </jenkins.security.ApiTokenProperty>
     <hudson.model.MyViewsProperty>
@@ -35,3 +45,4 @@
     </jenkins.security.LastGrantedAuthoritiesProperty>
   </properties>
 </user>
+

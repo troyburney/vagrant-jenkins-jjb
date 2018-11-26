@@ -54,4 +54,46 @@ sudo cp /mnt/host_machine/VirtualHost/jenkins /etc/nginx/sites-available/
 sudo ln -s /etc/nginx/sites-available/jenkins /etc/nginx/sites-enabled/
 sudo service nginx restart
 sudo service jenkins restart
+
+
+
+
+########################
+# Configuring JJB
+########################
+echo "Installing Jenkins Job Builder"
+
+sudo apt-get install -y python-pip
+sudo pip install --upgrade pip
+
+sudo pip install jenkins-job-builder
+
+
+
+jjbConfigDir=/etc/jenkins_jobs/
+jjbConfigFile=jenkins_jobs.ini
+
+mkdir $jjbConfigDir
+touch $jjbConfigDir$jjbConfigFile
+sudo cp /mnt/host_machine/JenkinsConfig/$jjbConfigFile $jjbConfigDir$jjbConfigFile
+
+cat $jjbConfigDir$jjbConfigFile
+
+
+
+cd /mnt/host_machine/
+jenkins-jobs update jobs
+
+
+
+
+
+
+
+
+
+
+
+
+
 echo "Success"
